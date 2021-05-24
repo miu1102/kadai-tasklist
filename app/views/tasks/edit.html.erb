@@ -1,6 +1,6 @@
-<h1>タスクの編集</h1>
+<h1>id: <%= @task.id %> のタスクの編集</h1>
 
-<%= form_with(@task) do |f| %>
+<%= form_with(model: @task, local: true) do |f| %>
   <%= f.label :content, 'タスク' %>
   <%= f.text_field :content %>
   
