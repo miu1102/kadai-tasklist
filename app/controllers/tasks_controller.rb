@@ -18,7 +18,7 @@ class TasksController < ApplicationController
       flash[:success]='タスクが投稿されました'
       redirect_to @task
     else 
-      flash.now[:danger]='タスクが投稿されません'
+      flash.now[:danger]='タスクの投稿に失敗しました'
       render:new
     end
   end
@@ -34,7 +34,7 @@ class TasksController < ApplicationController
       flash[:success]='タスクが編集されました'
       redirect_to @task
     else
-      flash.now[:danger]='タスクが編集されませんでした'
+      flash.now[:danger]='タスクの編集に失敗しました'
       render :edit
     end
     
@@ -51,7 +51,7 @@ class TasksController < ApplicationController
   private 
 
   def task_params
-  params.require(:task).permit(:content)
+   params.require(:task).permit(:content, :status)
   end
 end
 
