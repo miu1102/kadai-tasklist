@@ -3,22 +3,22 @@
    <%= form_with(model: @user, local: true) do |f| %>
     <%= render 'layouts/error_messages', model: f.object %>
     <div>
-      <%= f.label :name, 'name' %>
+      <%= f.label :name, 'Name' %>
       <%= f.text_field :name %>
     </div>
     
     <div>
-      <%= f.label :email, 'email' %>
+      <%= f.label :email, 'Email' %>
       <%= f.email_field :email %>
     </div>
     
     <div>
-      <%= f.label :password, 'password' %>
+      <%= f.label :password, 'Password' %>
       <%= f.password_field :password %>
     </div>
     
     <div>
-      <%= f.label :password_confirmation, 'confirmation' %>
+      <%= f.label :password_confirmation, 'Confirmation' %>
       <%= f.password_field :password_confirmation %>
     </div>
     
